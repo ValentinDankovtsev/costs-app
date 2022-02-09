@@ -1,4 +1,3 @@
-import { Component } from "react";
 import IRoute from "../interfaces/route.interface";
 import SignUpPage from "../pages/auth/SignUpPage";
 import CartPage from "../pages/CartPage";
@@ -9,7 +8,8 @@ import About from "../UI/About";
 export type Re = {
     path: string,
     exact: boolean,
-    component: Function,
+    
+    component: any,
     name: string,
     protected: boolean
 }

@@ -5,6 +5,8 @@ import firebase from 'firebase';
 import { SignInWithSocialMedia, signOut } from '../../modules/auth';
 import { Providers } from '../../config/firebase';
 
+// import {signInWithRedirect} from "firebase/auth"
+
 
 const SignUpPage: React.FunctionComponent<IPageProps> = props => {
 
@@ -27,7 +29,6 @@ const SignUpPage: React.FunctionComponent<IPageProps> = props => {
             });
     }
 
-    console.log(authenticating)
 
     return (
         <div className="AuthLogin">
@@ -39,6 +40,7 @@ const SignUpPage: React.FunctionComponent<IPageProps> = props => {
                 <div className="auth-btn-wrapper">
                     <button
                         disabled={authenticating}
+                        // onClick={() => signInWithSocialMedia(Providers.google)}
                         onClick={() => signInWithSocialMedia(Providers.google)}
                     >
                         Войти с помощью Google</button>
